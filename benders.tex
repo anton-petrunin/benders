@@ -1,0 +1,75 @@
+ \documentclass[twoside]{book}
+\usepackage{geometry}
+\usepackage{puzzles}
+
+
+\geometry%{top=0.9in, bottom=0.9in,left=0.9in, right=0.9in, paperwidth=6in, paperheight=9in}
+{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
+
+
+\def\thetitle{Математические умовыгибатели}
+\def\theauthor{Питер Винклер}
+\hypersetup{
+pdftitle={\thetitle},
+pdfauthor={\theauthor},
+pdfsubject={Математика}}
+
+
+\makeindex[title=Указатель головоломок,intoc]
+
+\makeatletter
+\newcommand{\rindex}[2][\imki@jobname]{%
+  \index[#1]{\detokenize{#2}}%
+}
+\makeatother
+
+
+\begin{document}
+%\pagestyle{empty}
+
+\title{\thetitle}
+\author{\theauthor\\
+\\
+Перевод с английского большой компанией}
+\date{}
+\maketitle
+
+\thispagestyle{empty}
+
+Предварительное издание предназначенное исключительно для отлова ляпов. 
+
+Исправления слать по адресу 
+\url{petrunin@math.psu.edu}.
+
+\vfill
+
+\input{warm-ups.tex}
+\input{warm-ups-sol.tex}
+
+{
+\small
+
+\printindex
+
+}
+
+{
+
+\sloppy
+
+\printbibliography[heading=bibintoc]
+
+
+\fussy
+
+}
+
+\newpage
+
+{
+
+\tableofcontents
+
+}
+
+\end{document}

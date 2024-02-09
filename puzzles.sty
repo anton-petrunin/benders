@@ -1,0 +1,79 @@
+\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage[english,russian]{babel}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}%+отступ в первой строке
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{bm}
+\usepackage[
+colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+]{hyperref}
+\usepackage{gensymb} %для \degree
+\usepackage{enumerate}
+
+
+\usepackage[xindy]{imakeidx}
+
+\usepackage{xcolor}
+\selectcolormodel{gray}
+
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\footnotesize}
+%\usepackage{blindtext}
+%\usepackage{quotchap}
+
+%\DeclareUnicodeCharacter{FEFF}{*******************************}
+
+\usepackage[
+sorting=debug,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+%autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+
+\AtBeginDocument{%removes the last "and" in author field
+    \renewcommand*{\finalnamedelim}{,\space}
+}
+
+
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+
+\addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+%\DeclareUnicodeCharacter{FEFF}{*******************************}
+
+\csname @openrightfalse\endcsname
+
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+\def\phi{\varphi}
+
+\renewcommand{\qedsymbol}{$\heartsuit$}
+\def\heart{\qed\medskip}
+\def\heartf{\vskip-4mm\heart}
+
+\newenvironment{addedbytheeditors}{\par\medskip\footnotesize
+% \trivlist\item[]
+}{\par\addvspace{\medskipamount}} % \endtrivlist
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
