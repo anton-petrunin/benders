@@ -34,6 +34,11 @@ Dot (0,0)*u;
 for i=1 upto (n+1)/(x.r*x.r):
 Dot (floor(i*x.r),floor(i*x.r*x.r))*u, (floor(i*x.r*x.r),floor(i*x.r))*u;
 endfor
+
+drawarrow (13+23,8+23)*u--(13+.5,8+.5)*u penbold;
+drawarrow (13+23,8+23)*u--(13+23,22+.5)*u penbold;
+drawarrow (13+23,8+23)*u--(19+.5,8+23)*u penbold;
+dOt (13+23,8+23)*u;
 endfig;
 
 
