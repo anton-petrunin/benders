@@ -39,6 +39,12 @@ drawarrow (13+23,8+23)*u--(13+.5,8+.5)*u penbold;
 drawarrow (13+23,8+23)*u--(13+23,22+.5)*u penbold;
 drawarrow (13+23,8+23)*u--(19+.5,8+23)*u penbold;
 dOt (13+23,8+23)*u;
+
+drawarrow (22,5)*u--(3+.5,5)*u penbold;
+dOt (22,5)*u;
+
+drawarrow (24,11)*u--(18+.5,11)*u penbold;
+dOt (24,11)*u;
 endfig;
 
 
