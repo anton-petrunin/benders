@@ -45,6 +45,9 @@ dOt (22,5)*u;
 
 drawarrow (24,11)*u--(18+.5,11)*u penbold;
 dOt (24,11)*u;
+
+drawarrow (4+5,7+5)*u--(4+.5,7+.5)*u penbold;
+dOt (4+5,7+5)*u;
 endfig;
 
 
