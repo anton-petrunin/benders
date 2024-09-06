@@ -1,0 +1,246 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb, amsmath, amsthm, epsf, epsfig}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-.35in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{1.5in}
+
+\newlength{\originalbase}
+\setlength{\originalbase}{\baselineskip}
+\newcommand{\spacing}[1]{\setlength{\baselineskip}{#1\originalbase}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\restr}{\! \upharpoonright \!}
+\newcommand{\E}{{\rm E}}
+\begin{document}
+\spacing{1}
+
+~
+
+\begin{center}
+{\bf \large Corrections to {\em Mathematical Mind-Benders}}\\[3mm]
+(contributed by eagle-eyed readers---the kind I love.  Special
+thanks to Svante Janson, who, to find all the errors he found,
+must have solved every puzzle first and then compared!)
+\end{center}
+
+\bigskip
+
+Page 5. Tamas Lengyel is at Occidental College in Los Angeles,
+not at Macalester College.\\
+
+Page 7, line 9-10: More accurate would be to say ``is about
+half the $n$th harmonic number.''\\
+
+Page 7, line -11: ``occurs more than 2/3 of the time'' is incorrect,
+and should be replaced by ``occurs about 43\% of the time.''\\
+
+++ It should be 48\%!
+
+Page. 14, last line of Testing Ostrich Eggs: Should be $(m! \times n)^{1/m}$.\\
+
+Page 16. At the end of the third paragraph from the bottom, the
+second Sicherman die should be $\{1,2,2,3,3,4\}$, not $\{2,3,3,4,4,5\}$.
+Further, on line 11, $<2$ should be $<3$; on line 14,
+$\{0\}$ should be $\{1\}$; and on line 17, $S_0$ should be $S_1$.\\
+
+Page 17. The factor $(x^2+x-1)^2$ in the expression for $h(x)$, in the middle
+of the page, should have been $(x^2-x+1)^2$.\\
+
+++ line 14: add ``and the sum of the coefficients in each of the polynomials is also equal to 6.''\\
+
+Page 18, line 14: ``1/3'' should be ``2/3''.\\
+
+Page 22. Concerning the solution to {\em A Truly Even Split}:
+There is a vast literature on multigrade equations.
+The biggest contributor is Albert Gloden, whose latest book
+is {\em Mehrgradige Gleichungen}, 2d edition, mit einem Vorwort von Maurice Kraitchik,
+P. Noordhoff, Groningen, 1944.\\
+
+Page 23.  The puzzle {\em Subsets with Constraints}
+was meant to be applied to numbers from 1 to 30,
+not 1 to $n$.  The solution beginning on page 29 assumes
+numbers from 1 to 30, but the techniques do work for arbitrary $n$.\\
+
+++ Page 26. line -17: $2^n$ --> $2^{29}$\\
+
+++ Page 27. line 12-13: I would expand these lines as \\
+
+But everything is fine here as well, since the leading terms in \( r(x+2^k) \) and \( r(x) \) are the same;
+that is, \( s(x) = r(x+2^k) - r(x) \) is a polynomial of degree less than \( k \).
+Thus,
+\begin{align*}
+r(X') &= r(X) + r(Y + 2^k) = r(X) + r(Y) + s(Y), \\
+r(Y') &= r(Y) + r(X + 2^k) = r(Y) + r(X) + s(X).
+\end{align*}
+Since \( s(Y) = s(X) \), we get that \( r(X') = r(Y') \).
+\\
+
+Page 27. At the beginning of the solution to {\em Getting the Numbers Back},
+``The answer if that'' should be ``The answer is that.''\\
+
+++Page 28. line -6: N --> n (3 times) \\
+
+Page 28.  Readers with training in probability theory may be interested to know that
+``Evening Out the Gumdrops'' can be generalized to Markov chains in striking fashion.
+
+Let $M = \{p_{ij}\}$ be the transition matrix of an ergodic finite-state Markov chain,
+with all entries rational.  Suppose that at the end of a round child $i$ has $m_i$ gumdrops.
+The teacher then hands out gumdrops so that each child has $n_i$ gumdrops, where
+$n_i$ is the least number not below $m_i$ such that $p_{ij}n_i$ is an integer, for every $j$.  Finally,
+for each $i$ and $j$, child $i$ passes $p_{ij}n_i$ gumdrops to child $j$.
+
+The problem of proving that this process terminates after finitely many rounds
+(with each child's fraction of the gumdrops proportional to the Markov chain's
+stationary distribution $\{\pi_i\}$) was posed to a Cambridge University mathematics seminar
+around 1975 by my Dartmouth colleague Laurie Snell, and solved by Richard Weber.
+
+Weber's solution was to let $(M_1,\dots,M_n)$ be an integer vector proportional
+to $(\pi_1,\dots,\pi_n)$, each entry of which is at least equal to the corresponding child's
+initial gumdrop holding.  He then observed that if $m_i \le M_i$ for all $i$, then 
+certainly $n_i \le M_i$ as well, since topping up to $M_i$ would have worked.
+It follows that $m'_j := \sum_i p_{ij} n_i \le \sum_i p_{ij} M_i = M_j$, where
+$m'_j$ is the $j$th child's holding after the round.  Thus, by induction, the $i$th
+child's holding never exceeds $M_i$.
+
+It remains only to observe that during a succession of rounds when the teacher is
+not handing out any gumdrops, the children's relative gumdrop holdings are approaching
+the stationary distribution.  This cannot go on forever since there are only finitely
+many ways to distribute the gumdrops currently in play.  Hence, gumdrops are added
+at finite intervals until the total reaches some $S \le \sum_i M_i$, at which point
+the stationary distribution will actually be reached.\\
+
+Page 29. The sentence ``Strange is not it? ...'' does not have much sense for me.\\
+
+Page 29.  ``Binet's'' formula was known to Euler, and is due to de Moivre (1667-1754)---and
+may go even farther back than that.\\
+
+Page 30, line 12: the sentence ending ``one copy of each prime that divides $n$'' should
+instead end with ``one copy of each prime that occurs with an odd power in the
+prime factorization of $n$.''
+
+Page 30, line 14: $2\times9$ does not qualify, therefore the 20's on the next two lines should be 19's.\\
+
+Page 32, lines 2 and 3 should have been: 
+``But $f$ also satisfies $f(x) = x -x^2 + f(x^4)$, which, since $x^4 < x$, implies that for any $c$, the
+sequence $f(c),f(c^{1/4}),f(c^{1/16}),\dots$ is strictly increasing.''  The Elkies source cited on page 31
+has it right.\\
+
+Page 32, lines 17--20:  Occurrences 2 and 4, but not 1 or 3, of the
+word ``second'' in this paragraph should have been ``minute''.\\
+
+Page 32, 4 lines up, the displayed formula should be:
+$$
+m + n = \left( \frac1p + \frac 1q \right)t + \frac1p \delta + \frac1q \ep~.
+$$
+
+++Page 32: The par "Let's first..."  seems to be redundant --- everything follows from
+the next par --- if we have $t-1$ blinks in $[0,t]$
+and $t$ blinks om $[0,t+1]$, then we have 1 blink in $[t,t+1]$.\\
+
+Page 33, 7 lines up: Should be $\alpha_n \ge \beta_n$, not $\alpha_n \le \beta_n$.\\
+
+Page 34, Figure 4: The third arrow from the left should point to the fifth, not the
+fourth, die on the bottom; and therefore should be labeled with 0 ($= 12 - 12$), not 3.\\
+
+Page 38, line -12: $2m-24$ cm should be $100(2m-24)/24$ cm.\\
+
+++ Page 38, line -8: phrase ``which starts at the midpoint of the rod'' is not needed + it might be confusing.\\
+
+Page 40, line -15: $j < k$ should be $j \le k$; line -5, omit 2E$[x+1]$.\\
+
+Page 41, last display: $2^{25}$ should be $2^{22}$.\\
+
+Page 43, line 7: Delete the sentence ``Alice's spot is $x_5$.'';
+line 10: $k$ should be $k{-}1$;
+line 11: $k>5$ should be $k\ge 5$, and $5{-}k$ should be $6{-}k$;
+line 14: $5$th should be $12$th.\\
+
+Page 56, line 2: $\pi A/(\sqrt{3}/4)$ should be $\pi A/(3\sqrt{3}/2)$.\\
+
+++Page 56, very end: The proofs of all three of the most recent statements can be found in the remarkable book by Fejes Tóth. Of course, all of them were proven before the publication of the German original of the book in 1953, and certainly not in 1972!\\
+
+++Page 59, line 3 : ``infinitely many'' >> ``too many''?\\
+
+++Page 59, line -5 :  Krasnoshel'skii >> Krasnosel'skii \\
+
+Page 60, line -11: the inequality ``$a_i>1$'' should have been ``$a_i>0$''.\\
+
+++Page 70: line 13-14: $n$ ---> 50 two times\\ 
+
+Page 76, {\em Urn Solitaire}: Helge Tverberg (University of Bergen, in Norway) notes
+that there is a ``less tricky,'' but still quite elegant, proof for this problem using
+induction on the total number of balls.\\
+
+Page 78, {\em Poker Quickie} solution:  The hand AAA55 does not quite deserve to be among
+the best, because at least one of the 5's must be in the same suit as an Ace, and those two cards
+couble-cover the straight flush A2345 in that suit.  Thus AAA55 prevents at most 15 straight
+flushes---{\em two}, not one, for each ace, and five for each 5, minus 1 for the overcount.
+The best hands, AAA66 through AAA99, prevent 16 each.  The last line (which contains an arithmetic
+error as well) should have said that AAAKK permits $40 - 9 = 31$ straight flushes instead of $40 - 16 = 24$. \\
+
+Page 78, second sentence, third paragraph under ``Recovering the Polynomial'' should be changed to:
+``If the oracle passes the digits of $p(\pi)$ to you one at a time, you'll need to work out when
+you've seen enough to determine the coefficients.''  You can also add a new paragraph:
+``Tverberg points out that this
+problem makes sense even if it is only known that the coefficients are non-negative
+reals.  To recover the polynomial $p$, you first ask for $p(1)$; if it's 0 then
+$p \equiv 0$ and you are done.  Otherwise, you can use further queries to
+form ``difference triangles.''  Recursively define $p_0(x) = p(x)$, $p_{i+1}(x) =
+p_i(x{+}1)-p_i(x)$.  At step $k$, ask for $p(k)$ and use the values $p(1),\dots,p(k)$
+to compute $p_{k-1}(1)$.  This will hit 0 exactly when $k$ reaches $d{+}2$ where $d$ is the degree
+of $p$. Once you know $d$, any $d{+}1$ of the $d{+}2$ values you already have suffice to
+determine $p$.''\\
+
+Page 79, middle:  ``Tristan can counter this with an O in 13 or 14 (or an S in 12 or 13)'' should
+have been ``Tristan can counter this with an O in 13 or 14 (or an S in 12)''.  If he plays an S in 13,
+Isolde wins immediately with an O in 12.\\
+
+Page 82, line 4: $2^{25} \times 2^{16} \times 2^4 = 2^{45}$ should be $3^{25} \times 3^{16} \times 3^4 = 3^{45}$;
+line 7: The exponent should be 45, not $2^{45}$;
+line 8: The exponent should be 36, not $2^{36}$;
+line 18: add also the central $2 \times 2$ square twice.\\
+
+Page 84, line 22: ``at least'' should be ``at most.''\\
+
+Page 87 line 1: the equation should be ``$\lfloor 7417r^2 \rfloor = 19,417$'' not
+``$\lfloor 7417r \rfloor = 19,417$''. \\
+
+Page 87.  The last sentence is nonsense; delete it.\\
+
+Page 96, line -12: $d(10)$ should be 2, not 1.\\
+
+Page 98, line 3: $N$ should be $n$; line -10, $k$ should be $-k$; line -8: $>$ should be $<$.\\
+
+Page 99, line -7: ``will all guess ``red'' '' should be ``will all guess ``blue'' ''. \\
+
+Page 111. The sentence above the figure should have begun ``You might in fact have to
+cut quite a few wedges$\dots$''.\\
+
+Page 113. The problem ``Charlie and the Cheaters'' failed to make it clear that Charlie knows
+the values of $i$ and $j$ as well as $k$.  (Thanks to David Feldman of UNH for pointing this out.) \\
+
+Page 115, line -6: the quoted phrase ``state space'' should be just the word ``state''. \\
+
+Page 117, Figure 42: angle label ``$x4z$'' should be ``$x-4z$''; line 5: $4z$ should be $kz$;
+line 9: $2k{-}1$ should be $2k{-}2$.\\
+
+Page 118, 11 lines up, should have been: ``The key is to note that event (c) is an independent copy of event (b) if you reverse
+both space and time,'' not ``of event (a).''\\
+
+++Page 120, last line: add ``and $a\ne b$''.\\
+
+Page 122, line 12: $y=0$ should be $y=1$.\\
+
+Page 123: 51 is not golden, because you can write $51=17+34$, and $17 \times 34$ can only be written one
+way as the product of two numbers between 2 and 99.  The rest of the argument still works.\\
+
+Page p. 125: The right-hand end of the last display should be $s^2-(b+c)s+bc$.\\
+
+Page 135, 7 lines up,  ``i.e.'' should be ``e.g.'';
+line -9: the word ``number'' is accidentally repeated.\\
+
+Page 136. The last line of {\em Twisting the Rectangle} should begin $\sqrt{3}\approx 1.73$, not
+$\sqrt{3}\approx 1.83$.
+
+\end{document}
