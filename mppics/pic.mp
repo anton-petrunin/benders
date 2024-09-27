@@ -4,8 +4,7 @@ input mparrows
 
 verbatimtex
 %&latex
-\documentclass[a4paper,10pt]{article}
-\usepackage{../paper-en}
+\documentclass[twoside]{book}
 \begin{document}
 etex
 
@@ -50,6 +49,52 @@ drawarrow (4+5,7+5)*u--(4+.5,7+.5)*u penbold;
 dOt (4+5,7+5)*u;
 endfig;
 
+beginfig(10) 
+save u, p, a, b;
+path p[];
+u:=2.8cm;
+a:=93.5;
 
+x.b= 4*(a-90);
+
+z.o=origin;
+z.r0=(0,1)*u;
+z.r1=z.r0 rotated -a;
+z.r2=z.r1 rotated -a;
+z.r3=z.r2 rotated -a;
+z.l1=z.r1 rotated x.b;
+z.l2=z.r2 rotated x.b;
+z.l3=z.r3 rotated x.b;
+
+z.a1=.8*z.r0 rotated ((-a+x.b)/2);
+z.a2=z.a1 rotated -a;
+z.a3=z.a2 rotated -a;
+z.a4=z.a3 rotated -a;
+
+z.b1=.8*z.r0 rotated (-a+x.b/2);
+z.b2=z.b1 rotated -a;
+z.b3=z.b2 rotated -a;
+
+labelarcsprof(z.r0, z.o, z.r1, 27, 14, btex $x$ etex rotated (-a/2));
+labelarcsprof(z.r0, z.o, z.l1, 34, 31, btex $x-4z$ etex rotated ((x.b-a)/2));
+labelarcsprof(z.r2, z.o, z.l2, 40, 40, btex $4z$ etex);
+
+draw circle (z.o,z.r0);
+draw z.o--z.r0;
+draw z.o--z.r1;
+draw z.o--z.r2;
+draw z.o--z.r3;
+draw z.o--z.l1;
+draw z.o--z.l2;
+draw z.o--z.l3;
+
+label(btex $A_1$ etex, z.a1);
+label(btex $A_2$ etex, z.a2);
+label(btex $A_3$ etex, z.a3);
+label(btex $A_4$ etex, z.a4);
+label(btex $B_1$ etex, z.b1);
+label(btex $B_2$ etex, z.b2);
+label(btex $B_3$ etex, z.b3);
+endfig;
 
 end
