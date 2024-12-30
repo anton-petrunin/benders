@@ -208,6 +208,12 @@ Page 76, {\em Urn Solitaire}: Helge Tverberg (University of Bergen, in Norway) n
 that there is a ``less tricky,'' but still quite elegant, proof for this problem using
 induction on the total number of balls.\\
 
+++Page 76, {\em Pirates and Gold}
+You may assume that the pirates are cunning, greedy, and cautious, their ...
+$>>>$
+You may assume that the pirates are cunning, greedy, cautious, and everyone knows knows all this, their ...
+\\
+
 Page 78, {\em Poker Quickie} solution:  The hand AAA55 does not quite deserve to be among
 the best, because at least one of the 5's must be in the same suit as an Ace, and those two cards
 couble-cover the straight flush A2345 in that suit.  Thus AAA55 prevents at most 15 straight
@@ -231,6 +237,24 @@ determine $p$.''\\
 Page 79, middle:  ``Tristan can counter this with an O in 13 or 14 (or an S in 12 or 13)'' should
 have been ``Tristan can counter this with an O in 13 or 14 (or an S in 12)''.  If he plays an S in 13,
 Isolde wins immediately with an O in 12.\\
+
+++Page 80. We add at the end of ``Pirates and Gold'':\\
+
+Thus, 49 coins are sufficient.  
+It might seem that this is the best possible result.  
+However, it turns out that an even smaller amount of coins is enough.  
+
+Let us continue the reasoning.  
+Suppose there are only 48 coins in the treasure.  
+This is sufficient to ensure the survival of $P_{98}$, but not $P_{99}$: any of $P_{99}$'s plans will be voted down by the 50 pirates who receive nothing.  
+Therefore, $P_{99}$ will vote for any proposal made by the captain just to survive.  
+This means the captain gets two free votes — his own and $P_{99}$'s — and buys another 48 votes.
+This is sufficient.  
+
+Following this reasoning, one can show that the captain survives if the crew size is $2n + 2^k$, where $n$ is the coin reserve, and $2^k$ is any power of two.  
+Thus, the minimum coin reserve sufficient for the captain’s survival is the solution to the equation $2n + 2^6 = 100$, which gives $n = 18$.  
+(Note that with 19 coins, the captain may not survive.)
+\\
 
 Page 82, line 4: $2^{25} \times 2^{16} \times 2^4 = 2^{45}$ should be $3^{25} \times 3^{16} \times 3^4 = 3^{45}$;
 line 7: The exponent should be 45, not $2^{45}$;
