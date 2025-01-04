@@ -90,18 +90,13 @@
 Отчасти это и объясняет, почему головоломка не поддавалась так долго и подтверждает при этом, что сокращения --- мощный инструмент.
 
 \begin{addedbytheeditors}
-\textbf{Редакторам:} Мутный оригинал и мутный перевод. Сам в доказательстве не разбирался, но может кому-то это интересно и этот кто-то всё перепишет?
 
-Костя: да, мутновато. Но насколько я в курсе этой задачи, смысл
-передан верно. Я только заменил "мощность" на "силу", потому что таков
-традиционный перевод в этой задаче.
+Пожалуй, стоит познакомить читателей с идеей конструктивного решения задачи для 2-ангела, придуманного Оддваром Клостером 
 
-Уинклер приводит идейно доказательство Мате, в то время как доказательство
-Клостера вроде бы попроще будет... Вот текст из Википедии:
+Как и в решении Мате, 2-ангел делает ходы по доске, как обычный шахматный король. Слева от начальной позиции ангела проводим вертикальную прямую (от  $y=-\infty$ до $y=\infty$). Эта линия будет путем ангела, который мы будем обновлять после каждого хода дьявола. Как только клетка оказывается слева от линии, ангел не будет делать никаких последующих ходов в нее. Каждый раз, когда дьявол блокирует новую клетку, мы перебираем все возможные изменения линии, перемещающие одну или несколько клеток справа от линии влево от нее. При этом рассматриваются только такие перемещения, в которых сдвиг $k$ клеток влево увеличит длину пути ангела не более чем на $2k$. Из всех таких перемещений выбираем то, которое перемещает наибольшее количество клеток. Затем ангел делает два шага по линии, сохраняя линию слева от себя (если бы дьявол не блокировал новые клетки, ангел шел бы на север бесконечно долго). Если при этом в пути ангела встречаются "слепые кишки", по ним можно не ходить. 
 
-Oddvar Kloster discovered a constructive algorithm to solve the problem with a 2-angel. This algorithm is quite simple and also optimal, since, as noted above, the devil has a winning strategy against a 1-angel.
-
-We start out by drawing a vertical line immediately to the left of the angel's starting position, down to $y=-\infty$ and up to $y=\infty$. This line represents the path the angel will take, which will be updated after each of the devil's moves, and partitions the board's squares into a "left set" and a "right set." Once a square becomes part of the left set, it will remain so for the remainder of the game, and the angel will not make any future moves to any of these squares. Every time the devil blocks off a new square, we search over all possible modifications to the path such that we move one or more squares in the right set which the devil has blocked off into the left set. We will only do this if the path increases in length by no more than twice the number of blocked squares moved into the left set. Of such qualifying paths, we choose one that moves the greatest number of blocked off squares into the left set. The angel then makes two steps along this path, keeping the path to its left when moving in the forward direction (so if the devil were not blocking off squares, the angel would travel north indefinitely). Note that when going clockwise around a corner, the angel will not move for one step, because the two segments touching the corner have the same square to their right.
+Разумеется, это лишь описание идеи, --- доказательство ее корректности слишком длинно для редакторского комментария. Отсылаем заинтересованного читателя к оригинальной статье Клостера
+%% добавить ссылку на https://doi.org/10.1016/j.tcs.2007.08.006 
 
 
 \end{addedbytheeditors}
